@@ -1,0 +1,11 @@
+docker -v // docker version
+docker ps // run a container
+docker ps --all or docker -a // list all container
+docker run hello-world // run a container
+docker rm container_id // remove a container
+docker run -p 80:80 nginx // run a container with port mapping
+docker run -p 80:80 nginx 
+docker stop container_id
+docker rm container_id
+
+linux commard
