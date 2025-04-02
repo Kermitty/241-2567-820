@@ -5,49 +5,93 @@
 
 body {
     font-family: 'kanit';
+    background: url('images/pexels-diva-31414506.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(106,76,156);
+    margin: 0;
+    padding: 0;
 }
+
 .container {
     width: 100%;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
-    background-color: azure;
+    background: white; /* Changed to white */
     padding: 20px;
     box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
+
 .header {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
+    text-shadow: 0 0 10px #fff;
+    color: #6a4c9c; /* Pastel purple */
 }
+
 .header-form {
     width: 140px;
+    color: #6a4c9c; /* Pastel purple */
 }
+
 .flex {
     display: flex;
 }
+
 .form-input {
     margin-bottom: 10px;
 }
+
 input.form, textarea {
-    border: 1px solid black;
     width: 100%;
+    background: #f0f0f0; /* สีเทาอ่อน */
+    color: #6a4c9c; /* Pastel purple */
+    padding: 5px;
+    border: 2px solid #6a4c9c; /* ขอบสีม่วง Pastel */
+    border-radius: 10px; /* มุมโค้ง */
 }
+
+input.form::placeholder, textarea::placeholder {
+    color: rgba(106, 76, 156, 0.7); /* Pastel purple placeholder */
+}
+
 .center {
     text-align: center;
 }
+
+/* สไตล์สำหรับปุ่ม */
 .button {
-    border: 0;
-    width: 50%;
-    background-color: aqua;
-    height: 40px;
+    display: inline-block;
+    width: 100%; /* ทำให้ปุ่มกว้างเต็มความกว้างของคอนเทนเนอร์ */
+    background-color: #6a4c9c; /* สีพื้นหลังสีม่วง pastel */
+    color: white; /* ข้อความสีขาว */
+    padding: 15px 0; /* เพิ่มความสูงของปุ่ม */
+    text-decoration: none; /* เอาเส้นขีดใต้ลิงก์ออก */
+    border-radius: 10px; /* มุมโค้ง */
+    font-size: 18px; /* ขนาดตัวอักษร */
+    text-align: center; /* จัดตัวอักษรให้อยู่กลาง */
+    transition: background-color 0.3s, transform 0.3s; /* เพิ่มการเปลี่ยนสีและเอฟเฟกต์ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นรูปมือ */
 }
+
+/* เปลี่ยนสีเมื่อเลื่อนเมาส์ไปที่ปุ่ม */
+.button:hover {
+    background-color: #9a6fc5; /* เปลี่ยนเป็นสีม่วงที่อ่อนลง */
+    transform: scale(1.05); /* ขยายเล็กน้อย */
+}
+
+
 .message {
     margin-top: 20px;
     padding: 10px;
     background-color: lightcoral;
     display: none;
+    border-radius: 5px;
 }
+
 .message.success {
     background-color: lightgreen;
     display: block;
@@ -56,6 +100,31 @@ input.form, textarea {
 .message.danger {
     background-color: lightcoral;
     display: block;
+}
+
+/* Target radio buttons and checkboxes labels */
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #6a4c9c; /* Set the color of radio and checkbox */
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    color: #6a4c9c; /* Pastel purple for label text */
+}
+
+/* Ensures labels are also styled correctly */
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+    color: #6a4c9c; /* Pastel purple when checked */
+}
+
+input[type="radio"] + label::before, input[type="checkbox"] + label::before {
+    color: #6a4c9c; /* Pastel purple for labels' pseudo-elements */
+}
+
+/* Add styling for the form field labels */
+label {
+    color: #6a4c9c; /* Pastel purple for all labels */
 }
 
 @media screen and (max-width: 768px) {
@@ -68,4 +137,22 @@ input.form, textarea {
     .button {
        width: 100%;
     }
+}
+/* สไตล์สำหรับลิงก์ */
+.button-link {
+    display: inline-block;
+    background-color: #6a4c9c; /* สีพื้นหลังสีม่วง pastel */
+    color: white; /* ข้อความสีขาว */
+    padding: 10px 20px; /* การเติมช่องว่างรอบๆ */
+    text-decoration: none; /* เอาเส้นขีดใต้ลิงก์ออก */
+    border-radius: 10px; /* มุมโค้ง */
+    font-size: 18px; /* ขนาดตัวอักษร */
+    text-align: center; /* จัดตัวอักษรให้อยู่กลาง */
+    transition: background-color 0.3s, transform 0.3s; /* เพิ่มการเปลี่ยนสีและเอฟเฟกต์ */
+}
+
+/* เปลี่ยนสีเมื่อเลื่อนเมาส์ไปที่ลิงก์ */
+.button-link:hover {
+    background-color: #9a6fc5; /* เปลี่ยนเป็นสีม่วงที่อ่อนลง */
+    transform: scale(1.05); /* ขยายเล็กน้อย */
 }
